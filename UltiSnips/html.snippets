@@ -1,0 +1,78 @@
+snippet #if
+{{#if ${1}}}
+	$0
+{{/if}}
+endsnippet
+
+snippet #ife
+{{#if ${1}}}
+	${2}
+{{else}}
+	{{$0}}
+{{/if}}
+endsnippet
+
+snippet #pathFor
+{{pathFor '${1}'}}
+endsnippet
+
+snippet temp
+<template name="${1}">
+	${0}
+</template>
+endsnippet
+
+snippet #each
+{{#each ${1}}}
+	${0}
+{{/each}}
+endsnippet
+
+snippet ionview
+{{#ionView}}
+	${0}
+{{/ionView}}
+endsnippet
+
+snippet ioncontent
+{{#ionContent}}
+	${0}
+{{/ionContent}}
+endsnippet
+
+snippet ionitem
+{{#ionItem ${1: buttonRight=true } ${2:avatar=true } ${3:iconLeft=true}}}
+	${0}
+{{/ionItem}}
+endsnippet
+
+snippet ionicon
+{{> ionIcon  icon="${1:ios-telephone}"  }}
+${0}
+endsnippet
+
+snippet #content "ionic content" b
+<div class="scroll-content ionic-scroll">
+	<div class="content overflow-scroll has-header">
+		${VISUAL}$1
+	</div>
+</div>
+endsnippet
+
+snippet aa. "html a with class" b
+<a class="$1" href="#">
+	$2
+</a>
+endsnippet
+
+snippet ull. "html ul with class" b
+<ul class="$1">
+	${VISUAL}$2
+</ul>
+endsnippet
+
+snippet lii. "html li with class" b
+<li class="$1">
+	${VISUAL}$2
+</li>
+endsnippet

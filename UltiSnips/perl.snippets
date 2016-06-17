@@ -1,0 +1,32 @@
+snippet @fun "function comments" b
+############################################################################
+#
+#       Usage:  ${1:function_name}( ${2:parameters})
+#
+#  Parameters:  ${2/,/: \n/g}
+#
+#     Returns:  A result hash
+#               If successful
+#                   $result = {
+#                      ok => 1;
+#                      ${3}
+#                   }
+#
+#               If Failed
+#                   $result = {
+#                      ${4:ok => 0;}
+#                   }
+# Description:  ${5:-}
+#
+#    Comments:  ${6:-} 
+#
+#############################################################################
+endsnippet
+
+snippet grr "get_rstate_revision" b
+my ${1:$rsate_data};
+${2:$cmd} = get_rstate_revision("${3:LM_NAME}");
+
+
+endsnippet
+
