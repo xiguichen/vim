@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+get nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -112,8 +112,8 @@ Plugin 'gorodinskiy/vim-coloresque'
 " mattn/emmet-vim
 Plugin 'mattn/emmet-vim'
 
-" rstacruz/sparkup
-Plugin 'rstacruz/sparkup'
+" xiguichen/sparkup
+Plugin 'xiguichen/sparkup'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
