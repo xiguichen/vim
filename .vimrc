@@ -171,7 +171,7 @@ let g:vimwiki_list = [vimwiki_1, vimwiki_2]
 " endif
 
 if has("win32")
-    set guifont=FangSong:h11
+    set guifont=NSimSun:h11
 endif
 
 
