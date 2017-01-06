@@ -14,6 +14,9 @@ set nocompatible
 set nobackup
 set noswapfile
 
+" Fix setup clipboard take too long time problem
+set clipboard=exclude:.*
+
 " Don't have a windows style key map
 let g:skip_loading_mswin = 1
 
