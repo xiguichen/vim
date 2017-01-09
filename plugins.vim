@@ -92,7 +92,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " SirVer/ultisnips
 Plugin 'SirVer/ultisnips'

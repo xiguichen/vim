@@ -22,6 +22,9 @@ After that you can copy '.vimrc' in the repository to your home directory
   * More info: https://github.com/Valloric/YouCompleteMe#windows
 
 
-
-
-
+### Install
+Run command:
+```bash
+cd ~/.vim
+sudo ./install.sh
+```
