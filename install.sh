@@ -1,5 +1,4 @@
 #!/bin/bash
 
 # install jsbeautify
-cnpm install -g js-beautify
-
+cd ~/.vim/bundle/vim-jsbeautify && git submodule update --init --recursive
