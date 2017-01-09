@@ -83,11 +83,6 @@ nnoremap <Leader>fr :FufRenewCache<cr>
 " For vimwki
 nnoremap <Leader>wf :VimwikiSearch /
 
-" For jsbeautify
-noremap <Leader>jjb :call JsBeautify()<cr>
-noremap <Leader>jhb :call HtmlBeautify()<cr>
-noremap <Leader>jcb :call CssBeautify()<cr>
-
 " For jsbeautify normal mode
 autocmd FileType javascript noremap <buffer>  <Leader>fff :call JsBeautify()<cr>
 " for json
@@ -106,13 +101,6 @@ autocmd FileType jsx vnoremap <buffer> <Leader>fff :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <Leader>fff :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <Leader>fff :call RangeCSSBeautify()<cr>
 
-" For the shotkey conflict with ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
 
 
 " For encoding
@@ -120,7 +108,7 @@ set encoding=utf-8
 
 
 set autoindent                    "Preserve current indent on new lines
-"set textwidth=78                  "Wrap at this column
+set textwidth=80                  "Wrap at this column
 set backspace=indent,eol,start    "Make backspaces delete sensibly
 
 set tabstop=4                     "Indentation levels every four columns
@@ -232,6 +220,10 @@ nmap <silent> <F6> :set invnumber<CR>
 " toggle quick fix after git grep
 autocmd QuickFixCmdPost *grep* cwindow
 
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 " YouCompleteMe black list
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
@@ -243,12 +235,15 @@ let g:ycm_filetype_blacklist = {
       \ 'vimwiki' : 1,
       \ 'gitcommit' : 1,
       \}
+
 " YouCompleteMe conflict with ultisnips 'tab'
-" let g:UltiSnipsExpandTrigger="<c-tab>"
-" let g:UltiSnipsListSnippets="<c-s-tab>"
-"
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+
+" For the shotkey conflict with ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " FuzzyFinder exclude node_modules
 let g:fuf_file_exclude = 'node_modules/.*'
