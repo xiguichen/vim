@@ -23,6 +23,10 @@ After that you can copy '.vimrc' in the repository to your home directory
 
 
 ### Install
+Before run install.sh, some preparation need to be done:
+* cmake is installed
+* nodejs is installed
+* python is installed
 Run command:
 ```bash
 cd ~/.vim
