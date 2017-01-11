@@ -5,8 +5,6 @@ filetype on
 
 let jshint2_save = 1
 
-
-filetype on
 " otherwise vimwiki may have problem
 set nocompatible
 
@@ -28,17 +26,13 @@ nnoremap <silent> <F3> :TlistUpdate<CR>
 " change leader key to space
 let mapleader=" "
 
-" For emmet
-" let g:user_emmet_leader_key='<Leader>em'
-
-
 " For NERD Tree
 nnoremap <silent> <F4> :NERDTreeToggle<CR>
 
 " Set so that vim can enable the syntax automatically
 syntax on
 
-" Set so that vim can do spell check
+" Set so that vim do not check spell
 set nospell
 
 " Set shift width to 4 blanks
@@ -53,10 +47,6 @@ set expandtab
 " Set so that vim can deal better with tab
 set smarttab
 set shiftround
-
-" Set so that vim can deal with different file type
-filetype plugin on
-filetype plugin indent on
 
 " This file contains the dictionary so that vim can automatically pop up for
 " you
@@ -118,53 +108,9 @@ set shiftround                    "Indent/outdent to nearest tabstop
 
 set rtp+=~/.vim/after
 
-
-" vimwiki settings
-let vimwiki_path=$HOME.'/vimwiki/'
-let vimwiki_html_path=$HOME.'/vimwiki_html/'
-let vimwiki2_path=$HOME.'wiki/web_develop//vimwiki/'
-let vimwiki2_html_path=$HOME.'wiki/web_develop/vimwiki_html/'
-let g:vimwiki_list = [{'path_html':vimwiki_html_path,
-                       \ 'template_path':vimwiki_html_path.'assets/',
-                       \ 'template_default': 'default',
-                       \ 'template_ext': '.tpl',
-                       \ 'auto_export': 0},
-                       \ {'path_html':vimwiki2_html_path,
-                       \ 'template_path':vimwiki2_html_path.'assets/',
-                       \ 'template_default': 'default',
-                       \ 'template_ext': '.tpl',
-                       \ 'auto_export': 0} ]
-
-let vimwiki_1 = {}
-let vimwiki_1.path             = '~/wiki/default/vimwiki'
-let vimwiki_1.path_html        = '~/wiki/default/vimwiki_html'
-let vimwiki_1.template_path    = '~/wiki/default/vimwiki_html/assets'
-let vimwiki_1.template_default = 'default'
-let vimwiki_1.template_ext     = '.tpl'
-let vimwiki_1.auto_export      = 0
-
-let vimwiki_2 = {}
-let vimwiki_2.path             = '~/wiki/web_develop/vimwiki'
-let vimwiki_2.path_html        = '~/wiki/web_develop/vimwiki_html'
-let vimwiki_2.template_path    = '~/wiki/web_develop/vimwiki_html/assets'
-let vimwiki_2.template_default = 'default'
-let vimwiki_2.template_ext     = '.tpl'
-let vimwiki_2.auto_export      = 0
-
-let g:vimwiki_list = [vimwiki_1, vimwiki_2]
-
-
-" This color scheme is better for read
-" if has("gui_running")
-"     colorscheme Chasing_Logic
-" else
-"     colorscheme Chasing_Logic
-" endif
-
 if has("win32")
     set guifont=NSimSun:h11
 endif
-
 
 
 " set relativenumber
@@ -172,13 +118,13 @@ set nu
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 
-if ( !exists("$email") )
+if ( !exists("$username") )
     let g:snips_author = "chenxigui"
 else
     let g:snips_author = $username
 endif
 
-if  ( !exists("$username"))
+if  ( !exists("$email"))
     let g:snips_author_email  = "chenxigui_192930@163.com"
 else
     let g:snips_author_email  = $email
@@ -194,9 +140,9 @@ endfunction
 
 let g:easytags_file = '~/.vim/tags'
 
-" 设置折叠方式为缩进方式
+" set the fold method
 set fdm=indent
-" 不折叠代码
+" don't fold
 set foldlevelstart=99
 
 " ignore .meteor for ack
