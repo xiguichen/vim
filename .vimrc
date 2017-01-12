@@ -61,6 +61,14 @@ set wildchar=<Tab> wildmenu wildmode=full
 " Set this so that vim can better search
 set incsearch
 
+" Search down into subfolders
+" Provides tab-completion for all file-related operation
+set path+=**
+set wildignore+=**/.git
+
+" Better tab complete for file
+set wildmenu
+
 " Append tag for perl
 "set tags+=perl_tag/tags
 "
