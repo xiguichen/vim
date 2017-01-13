@@ -54,9 +54,17 @@ set thesaurus+=$HOME/mthes/mthesaur.txt
 set dictionary+=$HOME/.vim/bundle/bootstrap-snippets/dictionary
 set complete+=k
 
-
 " Set for a better tab prompt in command line
 set wildchar=<Tab> wildmenu wildmode=full
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" :W sudo saves the file 
+" (useful for handling the permission-denied error)
+command W w !sudo tee % > /dev/null
+
+
 
 " Set this so that vim can better search
 set incsearch
@@ -64,7 +72,14 @@ set incsearch
 " Search down into subfolders
 " Provides tab-completion for all file-related operation
 set path+=**
-set wildignore+=**/.git
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
 
 " Better tab complete for file
 set wildmenu
@@ -201,3 +216,47 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " FuzzyFinder exclude node_modules
 let g:fuf_file_exclude = 'node_modules/.*'
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw 
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Close the current buffer
+map <leader>bd :Bclose<cr>:tabclose<cr>gT
+
+" Close all the buffers
+map <leader>ba :bufdo bd<cr>
+
+map <leader>l :bnext<cr>
+map <leader>h :bprevious<cr>
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove 
+map <leader>t<leader> :tabnext 
