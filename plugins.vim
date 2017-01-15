@@ -55,8 +55,8 @@ Plugin 'c.vim'
 Plugin 'perl-support.vim'
 Plugin 'java_getset.vim'
 " Plugin 'nerdtree-ack'
-Plugin 'The-NERD-tree'
-Plugin 'NERD_Tree-and-ack'
+" Plugin 'The-NERD-tree'
+" Plugin 'NERD_Tree-and-ack'
 " Plugin 'szw/vim-tags'
 Plugin 'Yggdroot/indentLine'
 
@@ -92,7 +92,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " SirVer/ultisnips
 Plugin 'SirVer/ultisnips'

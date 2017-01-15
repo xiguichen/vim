@@ -1,0 +1,14 @@
+{
+    "libs": [
+        "meteor",
+        "browser",
+        "jquery",
+        "underscore"
+    ],
+    "dontLoad": [".meteor"],
+    "plugins": {
+        "node": {},
+        "es_modules": {}
+    }
+
+}

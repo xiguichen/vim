@@ -51,7 +51,7 @@ set shiftround
 " This file contains the dictionary so that vim can automatically pop up for
 " you
 set thesaurus+=$HOME/mthes/mthesaur.txt
-set dictionary+=$HOME/.vim/bundle/bootstrap-snippets/dictionary
+autocmd FileType html set dictionary+=$HOME/.vim/bundle/bootstrap-snippets/dictionary
 set complete+=k
 
 " Set for a better tab prompt in command line
@@ -60,7 +60,7 @@ set wildchar=<Tab> wildmenu wildmode=full
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file 
+" :W sudo saves the file
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
@@ -184,7 +184,7 @@ nnoremap <Leader>sj :split %<.js<CR>
 nnoremap <silent> <F5> :IndentLinesToggle<CR>
 
 " toggle number show
-nmap <silent> <F6> :set invnumber<CR>  
+nmap <silent> <F6> :set invnumber<CR>
 
 " toggle quick fix after git grep
 autocmd QuickFixCmdPost *grep* cwindow
@@ -220,17 +220,17 @@ let g:fuf_file_exclude = 'node_modules/.*'
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
 set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " No annoying sound on errors
 set noerrorbells
@@ -258,5 +258,9 @@ map <leader>h :bprevious<cr>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext
+
+" Useful mapping for meteor develop with vim
+nnoremap <leader>mt :!cp ~/.vim/post_fix/meteor.json meteor.json<CR><CR>
+nnoremap <leader>tp :!cp ~/.vim/post_fix/meteor-tern-project.json .tern-project<CR><CR>
