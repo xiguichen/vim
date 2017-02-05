@@ -74,7 +74,7 @@ set incsearch
 set path+=**
 
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc,*/node_modules/*
 if has("win16") || has("win32")
     set wildignore+=.git\*,.hg\*,.svn\*
 else
@@ -128,6 +128,9 @@ set tabstop=4                     "Indentation levels every four columns
 set expandtab                     "Convert all tabs typed to spaces
 set shiftwidth=4                  "Indent/outdent by four columns
 set shiftround                    "Indent/outdent to nearest tabstop
+
+autocmd FileType javascript set tabstop=2
+autocmd FileType javascript set shiftwidth=2
 
 set rtp+=~/.vim/after
 
