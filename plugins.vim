@@ -112,5 +112,8 @@ Plugin 'mattn/emmet-vim'
 " rstacruz/sparkup
 Plugin 'rstacruz/sparkup'
 
+" handlebar
+Plugin 'mustache/vim-mustache-handlebars'
+
 
 call vundle#end()            " required
