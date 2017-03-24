@@ -58,7 +58,7 @@ Plugin 'java_getset.vim'
 " Plugin 'The-NERD-tree'
 " Plugin 'NERD_Tree-and-ack'
 " Plugin 'szw/vim-tags'
-Plugin 'Yggdroot/indentLine'
+" Plugin 'Yggdroot/indentLine'
 
 " color scheme
 Plugin 'endel/vim-github-colorscheme'
@@ -114,6 +114,9 @@ Plugin 'rstacruz/sparkup'
 
 " handlebar
 Plugin 'mustache/vim-mustache-handlebars'
+
+" coffee script
+Plugin 'kchmck/vim-coffee-script'
 
 
 call vundle#end()            " required

@@ -133,3 +133,9 @@
 [submodule "bundle/vim-indent-guides"]
 	path = bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-mustache-handlebars"]
+	path = bundle/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
