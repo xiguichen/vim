@@ -215,7 +215,7 @@ let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 " For the shotkey conflict with ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpBackwardTrigger="<c-x>"
 
 " FuzzyFinder exclude node_modules
 let g:fuf_file_exclude = 'node_modules/.*'
@@ -267,3 +267,23 @@ map <leader>t<leader> :tabnext
 " Useful mapping for meteor develop with vim
 nnoremap <leader>mt :!cp ~/.vim/post_fix/meteor.json meteor.json<CR><CR>
 nnoremap <leader>tp :!cp ~/.vim/post_fix/meteor-tern-project.json .tern-project<CR><CR>
+
+nnoremap <C-W>O :call MaximizeToggle()<CR>
+nnoremap <C-W>o :call MaximizeToggle()<CR>
+nnoremap <C-W><C-O> :call MaximizeToggle()<CR>
+
+function! MaximizeToggle()
+  if exists("s:maximize_session")
+    exec "source " . s:maximize_session
+    call delete(s:maximize_session)
+    unlet s:maximize_session
+    let &hidden=s:maximize_hidden_save
+    unlet s:maximize_hidden_save
+  else
+    let s:maximize_hidden_save = &hidden
+    let s:maximize_session = tempname()
+    set hidden
+    exec "mksession! " . s:maximize_session
+    only
+  endif
+endfunction
