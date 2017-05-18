@@ -50,16 +50,10 @@ Plugin  'FuzzyFinder'
 Plugin 'vimwiki/vimwiki'
 
 Plugin 'javacomplete'
-" Plugin 'Vim-JDE'
+
 Plugin 'Tagbar'
-Plugin 'c.vim'
 Plugin 'perl-support.vim'
-Plugin 'java_getset.vim'
-" Plugin 'nerdtree-ack'
-" Plugin 'The-NERD-tree'
-" Plugin 'NERD_Tree-and-ack'
-" Plugin 'szw/vim-tags'
-" Plugin 'Yggdroot/indentLine'
+
 
 " color scheme
 Plugin 'endel/vim-github-colorscheme'
@@ -86,7 +80,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'bonsaiben/bootstrap-snippets'
 
 " Lint
-" Plugin 'joestelmach/lint.vim'
 Plugin 'Shutnik/jshint2.vim'
 
 " tern_for_vim
