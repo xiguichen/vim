@@ -1,4 +1,4 @@
-#vim
+# vim
 
 ### How to use this repository
 This repository using git submodule to manage bundles. To use this repository:

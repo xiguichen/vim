@@ -46,7 +46,6 @@ Plugin 'AutoComplPop'
 Plugin 'c9s/perlomni.vim'
 
 Plugin 'L9'
-Plugin  'FuzzyFinder'
 Plugin 'vimwiki/vimwiki'
 
 Plugin 'javacomplete'
@@ -112,5 +111,13 @@ Plugin 'mustache/vim-mustache-handlebars'
 " coffee script
 Plugin 'kchmck/vim-coffee-script'
 
+" scrooloose/nerdtree
+Plugin 'scrooloose/nerdtree'
+
+" kien/ctrlp.vim
+Plugin 'kien/ctrlp.vim'
+
+" w0rp/ale
+Plugin 'w0rp/ale'
 
 call vundle#end()            " required

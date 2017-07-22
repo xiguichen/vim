@@ -1,28 +1,28 @@
 snippet publish
-	Meteor.publish('${1}',${0});
+Meteor.publish('${1}',${0});
 endsnippet
 
 snippet subscribe
-	Meteor.subscribe('${1}');
+Meteor.subscribe('${1}');
 endsnippet
 
 snippet helpers
-	Template.${1}.helpers({
-		${0}
-	});
+Template.${1}.helpers({
+	${0}
+});
 endsnippet
 
 snippet events
-	Template.${1}.events({
-		${0}
-	});
+Template.${1}.events({
+	${0}
+});
 endsnippet
 
 snippet route
-	Router.route('${1:path}',{
-		name:'${2:templateName}',
-		data:'${0}'
-	});
+Router.route('${1:path}',{
+	name:'${2:templateName}',
+	data:'${0}'
+});
 endsnippet
 
 snippet collection "Mongo.Collection" b
