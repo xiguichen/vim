@@ -118,10 +118,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
 " w0rp/ale
-Plugin 'w0rp/ale'
-
-" ctrlp
-Plugin 'ctrlp.vim'
+if v:version > 800
+  Plugin 'w0rp/ale'
+endif
 
 
 call vundle#end()            " required
