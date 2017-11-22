@@ -120,4 +120,8 @@ Plugin 'kien/ctrlp.vim'
 " w0rp/ale
 Plugin 'w0rp/ale'
 
+" ctrlp
+Plugin 'ctrlp.vim'
+
+
 call vundle#end()            " required
