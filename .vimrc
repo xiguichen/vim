@@ -266,7 +266,9 @@ map <leader>t<leader> :tabnext
 
 " Useful mapping for meteor develop with vim
 nnoremap <leader>mt :!cp ~/.vim/post_fix/meteor.json meteor.json<CR><CR>
-nnoremap <leader>tp :!cp ~/.vim/post_fix/meteor-tern-project.json .tern-project<CR><CR>
+nnoremap <leader>mtp :!cp ~/.vim/post_fix/meteor-tern-project.json .tern-project<CR><CR>
+nnoremap <leader>tp :!cp ~/.vim/post_fix/tern-project.json .tern-project<CR><CR>
+nnoremap <leader>el :!cp ~/.vim/post_fix/eslintrc .eslintrc<CR><CR>
 
 nnoremap <C-W>O :call MaximizeToggle()<CR>
 nnoremap <C-W>o :call MaximizeToggle()<CR>

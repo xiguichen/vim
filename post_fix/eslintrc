@@ -1,0 +1,149 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "amd": true,
+    "commonjs": true
+  },
+  "root": true,
+  "globals": {},
+  "rules": {
+    "no-bitwise": 2,
+    "camelcase": [
+      2,
+      {
+        "properties": "always"
+      }
+    ],
+    "curly": [
+      2,
+      "all"
+    ],
+    "eqeqeq": 2,
+    "guard-for-in": 2,
+    "no-extend-native": 2,
+    "indent": [
+      2,
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-use-before-define": 2,
+    "no-caller": 2,
+    "no-empty": 2,
+    "no-irregular-whitespace": 2,
+    "no-new": 2,
+    "quotes": [
+      2,
+      "double"
+    ],
+    "no-undef": 2,
+    "no-unused-vars": 2,
+    "strict": [
+      2,
+      "global"
+    ],
+    "max-depth": [
+      2,
+      6
+    ],
+    "no-multiple-empty-lines": [
+        2,
+        { "max": 2, "maxEOF": 1 }
+    ],
+    "max-statements": [
+      2,
+      65
+    ],
+    "no-loop-func": 2,
+    "space-before-function-paren": [
+      2,
+      "never"
+    ],
+    "space-in-parens": [
+      2,
+      "never"
+    ],
+    "space-unary-ops": [
+      2,
+      {
+        "words": false,
+        "nonwords": false
+      }
+    ],
+    "no-with": 2,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-trailing-spaces": 2,
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "brace-style": 2,
+    "no-multi-str": 2,
+    "no-multi-spaces": 2,
+    "padded-blocks": [
+      2,
+      "never"
+    ],
+    "key-spacing": [
+      2,
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "space-infix-ops": 2,
+    "keyword-spacing": [
+      2,
+      {
+        "overrides": {
+          "else": {
+            "before": true
+          },
+          "while": {
+            "before": true
+          },
+          "catch": {
+            "before": true
+          }
+        }
+      }
+    ],
+    "space-before-blocks": [
+      2,
+      "always"
+    ],
+    "wrap-iife": 2,
+    "array-bracket-spacing": [
+      2,
+      "always",
+      {
+        "arraysInArrays": false
+      }
+    ],
+    "comma-style": [
+      2,
+      "last"
+    ],
+    "comma-spacing": [
+      2,
+      {"before": false, "after": true}
+    ],
+    "eol-last": 2,
+    "dot-notation": 2,
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "operator-linebreak": [
+      2,
+      "after"
+    ],
+    "semi": [
+      2,
+      "always"
+    ]
+  }
+}

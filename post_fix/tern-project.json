@@ -1,0 +1,13 @@
+{
+    "libs": [
+        "browser",
+        "jquery",
+        "underscore"
+    ],
+    "dontLoad": [""],
+    "plugins": {
+        "node": {},
+        "es_modules": {}
+    }
+
+}
