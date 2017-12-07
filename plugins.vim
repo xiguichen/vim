@@ -54,11 +54,7 @@ Plugin 'Tagbar'
 Plugin 'perl-support.vim'
 
 
-" color scheme
-Plugin 'endel/vim-github-colorscheme'
 
-" Plugin 'vim-colorschemes'
-Plugin 'flazz/vim-colorschemes'
 
 Plugin 'mileszs/ack.vim'
 
@@ -96,9 +92,6 @@ Plugin 'Shougo/vimshell.vim'
 " Shougo/vimproc.vim
 Plugin 'Shougo/vimproc.vim'
 
-" gorodinskiy/vim-coloresque
-Plugin 'gorodinskiy/vim-coloresque'
-
 " mattn/emmet-vim
 Plugin 'mattn/emmet-vim'
 
@@ -121,6 +114,9 @@ Plugin 'kien/ctrlp.vim'
 if v:version > 800
   Plugin 'w0rp/ale'
 endif
+
+" colorscheme
+Plugin 'altercation/vim-colors-solarized'
 
 
 call vundle#end()            " required

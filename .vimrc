@@ -292,7 +292,10 @@ endfunction
 
 command! -nargs=1 Ss let @/ = <q-args>
 
-colorscheme desert
 
 " for nerdtree render problem in tmux
 set tenc=latin1
+
+" colorscheme
+set background=dark
+colorscheme solarized
