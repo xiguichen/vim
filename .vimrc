@@ -19,8 +19,7 @@ set clipboard=exclude:.*
 let g:skip_loading_mswin = 1
 
 " For the function list
-nnoremap <silent> <F2> :TlistToggle<CR>
-nnoremap <silent> <F3> :TlistUpdate<CR>
+nnoremap <silent> <F2> :TagbarToggle<CR>
 
 
 " change leader key to space
