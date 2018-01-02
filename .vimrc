@@ -61,7 +61,7 @@ nmap <leader>w :w!<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
+command! W w !sudo tee % > /dev/null
 
 
 
@@ -86,11 +86,8 @@ set wildmenu
 " Append tag for perl
 "set tags+=perl_tag/tags
 "
-" For fuzzyfinder
-nnoremap <Leader>ff :FufFile **/<cr>
-nnoremap <Leader>fb :FufBuffer<cr>
-nnoremap <Leader>ft :FufTag<cr>
-nnoremap <Leader>fr :FufRenewCache<cr>
+" For ctrlp
+nnoremap <Leader>t  :CtrlPTag<cr>
 
 " For vimwki
 nnoremap <Leader>wf :VimwikiSearch /
@@ -130,6 +127,7 @@ set shiftround                    "Indent/outdent to nearest tabstop
 
 autocmd FileType javascript set tabstop=2
 autocmd FileType javascript set shiftwidth=2
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc
 
 set rtp+=~/.vim/after
 
@@ -157,11 +155,14 @@ endif
 
 " Add argument (can be negative, default 1) to global variable i.
 " Return value of i before the change.
-function Inc(...)
-  let result = g:i
-  let g:i += a:0 > 0 ? a:1 : 1
-  return result
-endfunction
+if ! exists("*Inc")
+
+    function Inc(...)
+        let result = g:i
+        let g:i += a:0 > 0 ? a:1 : 1
+        return result
+    endfunction
+endif
 
 let g:easytags_file = '~/.vim/tags'
 
