@@ -32,3 +32,40 @@ endsnippet
 snippet glb "global" b
 /*global ${1} */
 endsnippet
+
+
+snippet mmethods "Meteor methods"
+Meteor.methods({
+  'server/${1:method_name}': function () {
+    // server method logic
+  }
+});
+endsnippet
+
+snippet mcall "Meteor call"
+Meteor.call('${1:method_name}', ${2:parameter}, (error, result) => {
+	${0}
+});
+endsnippet
+
+snippet ttadd "Tinytest.add"
+Tinytest.add('${1:example}', function (test) {
+  test.equal(true, true);
+${0}
+});
+endsnippet
+
+snippet ttaddAsync "Tinytest.addAsync"
+Tinytest.addAsync('${1:example}', (test, onComplete) => {
+${0}
+});
+endsnippet
+
+snippet ttundef "test.isUndefined"
+test.isUndefined(${1:actual}, ${2:message});
+endsnippet
+
+
+snippet ttnotundef "test.isUndefined"
+test.isNotUndefined(${1:actual}, ${2:message});
+endsnippet

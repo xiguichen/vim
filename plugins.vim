@@ -62,8 +62,6 @@ Plugin 'mileszs/ack.vim'
 " jsbeautify
 Plugin 'maksimr/vim-jsbeautify'
 
-" Optional:
-Plugin 'honza/vim-snippets'
 
 Plugin 'vim-misc'
 " Plugin 'xolox/vim-easytags'
@@ -85,6 +83,9 @@ Plugin 'Valloric/YouCompleteMe'
 
 " SirVer/ultisnips
 Plugin 'SirVer/ultisnips'
+
+" Optional:
+Plugin 'honza/vim-snippets'
 
 " Shougo/vimshell.vim
 Plugin 'Shougo/vimshell.vim'

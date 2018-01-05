@@ -113,6 +113,8 @@ autocmd FileType css vnoremap <buffer> <Leader>fff :call RangeCSSBeautify()<cr>
 
 
 " For encoding
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
 set encoding=utf-8
 set termencoding=utf-8
 
@@ -301,3 +303,5 @@ command! -nargs=1 Ss let @/ = <q-args>
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
+autocmd FileType js UltiSnipsAddFiletypes javascript-jsdoc
