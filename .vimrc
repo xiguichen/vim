@@ -114,6 +114,7 @@ autocmd FileType css vnoremap <buffer> <Leader>fff :call RangeCSSBeautify()<cr>
 
 " For encoding
 set encoding=utf-8
+set termencoding=utf-8
 
 
 set autoindent                    "Preserve current indent on new lines
@@ -125,8 +126,8 @@ set expandtab                     "Convert all tabs typed to spaces
 set shiftwidth=4                  "Indent/outdent by four columns
 set shiftround                    "Indent/outdent to nearest tabstop
 
-autocmd FileType javascript set tabstop=2
-autocmd FileType javascript set shiftwidth=2
+autocmd FileType javascript set tabstop=4
+autocmd FileType javascript set shiftwidth=4
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc
 
 set rtp+=~/.vim/after
