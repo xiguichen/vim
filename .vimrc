@@ -295,7 +295,7 @@ command! -nargs=1 Ss let @/ = <q-args>
 
 
 " for nerdtree render problem in tmux
-set tenc=latin1
+" set tenc=latin1
 
 " colorscheme
 set background=dark
