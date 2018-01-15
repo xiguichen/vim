@@ -128,9 +128,8 @@ set expandtab                     "Convert all tabs typed to spaces
 set shiftwidth=4                  "Indent/outdent by four columns
 set shiftround                    "Indent/outdent to nearest tabstop
 
-autocmd FileType javascript set tabstop=4
-autocmd FileType javascript set shiftwidth=4
-autocmd FileType javascript UltiSnipsAddFiletypes javascript-jsdoc
+autocmd FileType javascript set tabstop=2
+autocmd FileType javascript set shiftwidth=2
 
 set rtp+=~/.vim/after
 
@@ -220,6 +219,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-x>"
 
+" For ultisnip to create snip in correct directory
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+
 " FuzzyFinder exclude node_modules
 let g:fuf_file_exclude = 'node_modules/.*'
 
@@ -305,3 +307,5 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 autocmd FileType js UltiSnipsAddFiletypes javascript-jsdoc
+
+let g:prettier#config#trailing_comma = 'none'

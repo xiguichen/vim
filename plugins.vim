@@ -119,5 +119,8 @@ endif
 " colorscheme
 Plugin 'altercation/vim-colors-solarized'
 
+" prettier/vim-prettier
+Plugin 'prettier/vim-prettier'
+
 
 call vundle#end()            " required

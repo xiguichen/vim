@@ -69,3 +69,39 @@ endsnippet
 snippet ttnotundef "test.isUndefined"
 test.isNotUndefined(${1:actual}, ${2:message});
 endsnippet
+
+snippet @format "@format"
+// @format
+endsnippet
+
+snippet dfn "define if not exists"
+${1:var} = $1 || {};
+endsnippet
+
+snippet toc "Template..onCreated"
+Template.${1:templateName}.onCreated(function () {
+	${2}
+});
+endsnippet
+
+snippet tor "Template..onRendered"
+Template.${1:templateName}.onRendered(function () {
+	${2}
+});
+endsnippet
+
+snippet thelper "Template..helper"
+Template.${1:TemplateName}.helpers({
+	${2:helperName}() {
+		// Show newest tasks at the top
+	}
+});
+endsnippet
+
+snippet tevents "Template..events"
+Template.${1:TemplateName}.events({
+	${2:click .btn}(event) {
+	
+	}
+});
+endsnippet
