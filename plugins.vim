@@ -10,7 +10,8 @@ Plugin 'pydoc.vim'
 Plugin 'tabular'
 
 " For comment
-Plugin 'tComment'
+"Plugin 'tComment'
+Plugin 'tomtom/tcomment_vim'
 
 " For html match
 Plugin 'matchit.zip'
