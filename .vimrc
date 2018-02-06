@@ -219,6 +219,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-x>"
 
+" list all available snip
+nnoremap <Leader><tab> :call UltiSnips#ListSnippets()<CR>
+
 " For ultisnip to create snip in correct directory
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
