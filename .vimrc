@@ -95,7 +95,7 @@ nnoremap <Leader>wf :VimwikiSearch /
 " For jsbeautify normal mode
 autocmd FileType javascript noremap <buffer>  <Leader>fff :call JsBeautify()<cr>
 " for json
-autocmd FileType json noremap <buffer> <Leader>fff  :call JsonBeautify()<cr>
+autocmd FileType json noremap <buffer> <Leader>fff  :%python -m json.tool<cr>
 " for jsx
 autocmd FileType jsx noremap <buffer>  <Leader>fff  :call JsxBeautify()<cr>
 " for html
