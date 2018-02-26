@@ -123,5 +123,7 @@ Plugin 'altercation/vim-colors-solarized'
 " prettier/vim-prettier
 Plugin 'prettier/vim-prettier'
 
+" rizzatti/dash.vim
+Plugin 'rizzatti/dash.vim'"
 
 call vundle#end()            " required
