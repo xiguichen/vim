@@ -245,3 +245,20 @@ snippet listfiles "list files"
 import glob
 files = glob.glob("${1:/home/adam/}${2:*.txt}")
 endsnippet
+
+
+snippet parser "argparse"
+
+description = "${0:description}"
+
+parser = argparse.ArgumentParser(description=description)
+
+parser.add_argument("productNumber", help="product Number")
+parser.add_argument("productRevision", help="product revision")
+parser.add_argument("flowContext", help="flow context")
+
+args = parser.parse_args()
+return args
+
+
+endsnippet
