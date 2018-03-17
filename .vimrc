@@ -128,9 +128,6 @@ set expandtab                     "Convert all tabs typed to spaces
 set shiftwidth=4                  "Indent/outdent by four columns
 set shiftround                    "Indent/outdent to nearest tabstop
 
-autocmd FileType javascript set tabstop=2
-autocmd FileType javascript set shiftwidth=2
-
 set rtp+=~/.vim/after
 
 if has("win32")
@@ -312,3 +309,13 @@ colorscheme solarized
 autocmd FileType js UltiSnipsAddFiletypes javascript-jsdoc
 
 let g:prettier#config#trailing_comma = 'none'
+
+" Put this in vimrc or a plugin file of your own.
+" After this is configured, :ALEFix will try and fix your JS code with ESLint.
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+
+" Set this setting in vimrc if you want to fix files automatically on save.
+" This is off by default.
+let g:ale_fix_on_save = 1

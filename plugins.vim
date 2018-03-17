@@ -113,7 +113,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
 " w0rp/ale
-if v:version > 800
+if v:version >= 800
   Plugin 'w0rp/ale'
 endif
 

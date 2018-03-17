@@ -33,6 +33,18 @@ snippet glb "global" b
 /*global ${1} */
 endsnippet
 
+snippet dlint "disable lint"
+//eslint-disable-line
+endsnippet
+
+snippet mstart "Meteor.startup()" b
+  Meteor.startup(() => {
+    if (Rooms.find().count() === 0) {
+      Rooms.insert({ name: 'Initial room' });
+    }
+  });
+endsnippet
+
 
 snippet mmethods "Meteor methods"
 Meteor.methods({
@@ -104,4 +116,24 @@ Template.${1:TemplateName}.events({
 	
 	}
 });
+endsnippet
+
+snippet wd "winston.debug" b
+winston.debug("${1}");
+endsnippet
+
+snippet wl "winston.log" b
+winston.log("${1}");
+endsnippet
+
+snippet wi "winston.info" b
+winston.info("${1}");
+endsnippet
+
+snippet we "winston.error" b
+winston.error("${1}");
+endsnippet
+
+snippet ww "winston.warn" b
+winston.warn("${1}");
 endsnippet
