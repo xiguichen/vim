@@ -97,9 +97,6 @@ Plugin 'Shougo/vimproc.vim'
 " mattn/emmet-vim
 Plugin 'mattn/emmet-vim'
 
-" rstacruz/sparkup
-Plugin 'rstacruz/sparkup'
-
 " handlebar
 Plugin 'mustache/vim-mustache-handlebars'
 
