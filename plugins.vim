@@ -112,6 +112,9 @@ Plugin 'scrooloose/nerdtree'
 " kien/ctrlp.vim
 Plugin 'kien/ctrlp.vim'
 
+" triglav/vim-visual-increment
+Plugin 'triglav/vim-visual-increment'
+
 " w0rp/ale
 if v:version >= 800
   Plugin 'w0rp/ale'
@@ -125,5 +128,8 @@ Plugin 'prettier/vim-prettier'
 
 " rizzatti/dash.vim
 Plugin 'rizzatti/dash.vim'"
+
+" rdnetto/YCM-Generator
+Plugin 'rdnetto/YCM-Generator'
 
 call vundle#end()            " required
