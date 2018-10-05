@@ -20,9 +20,9 @@ sudo ./install.sh
 ```
 
 ### Extra work to do in windows
-* install vim from : https://bintray.com/veegee/generic/vim_x64/
+* install vim from : https://github.com/vim/vim-win32-installer/releases
 * download and install cmake: https://cmake.org/download/  ( Make sure cmake in PATH environment variable )
-* install python 2.7.10 ( 2.7.11 does not work with above vim )
+* installed related python according to vim release page
 * install tern_for_vim with "npm install"
 * install youcompleteme
   * git submodule update --init --recursive
