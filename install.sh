@@ -27,6 +27,10 @@ which node >/dev/null || echo "node is not installed yet, please install nodejs 
 # make sure that npm have been installed
 which npm >/dev/null || echo "npm is not installed yet, please install npm first" && exit 1
 
+if [[ ! (-d ~/.vim/bundle) ]]; then
+    mkdir -p ~/.vim/bundle
+fi
+
 # check if we already installed Vundle
 if [[ -d ~/.vim/bundle/Vundle.vim/.git ]]; then
     echo "Vundle plugin have already been installed, no need to install"
