@@ -17,11 +17,12 @@ if ! has("nvim")
     set clipboard=exclude:.*
 endif
 
+
 " Don't have a windows style key map
 let g:skip_loading_mswin = 1
 
 " For the function list
-nnoremap <silent> <F2> :TagbarToggle<CR>
+nnoremap <silent> <F3> :TagbarToggle<CR>
 
 
 " change leader key to space
@@ -91,8 +92,6 @@ set wildmenu
 " For ctrlp
 nnoremap <Leader>t  :CtrlPTag<cr>
 
-" For vimwki
-nnoremap <Leader>wf :VimwikiSearch /
 
 " For jsbeautify normal mode
 autocmd FileType javascript noremap <buffer>  <Leader>fff :call JsBeautify()<cr>
@@ -143,13 +142,13 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 set laststatus=2
 
 if ( !exists("$username") )
-    let g:snips_author = "chenxigui"
+    let g:snips_author = "<username>"
 else
     let g:snips_author = $username
 endif
 
 if  ( !exists("$email"))
-    let g:snips_author_email  = "chenxigui_192930@163.com"
+    let g:snips_author_email  = "<email>"
 else
     let g:snips_author_email  = $email
 endif
@@ -175,8 +174,6 @@ set foldlevelstart=99
 " ignore .meteor for ack
 let g:ackprg = "ack --ignore-dir .meteor"
 
-" d8
-let d8_command="/usr/bin/d8"
 
 " switch between .html and .js
 nnoremap <Leader>oh :e %<.html<CR>
@@ -331,3 +328,7 @@ let g:prettier#config#bracket_spacing = 'true'
 
 " source c# related configurations
 source $HOME/.vim/csharp.vim
+
+" get python document when press K
+" autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
+autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
