@@ -216,7 +216,7 @@ let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 " For the shotkey conflict with ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-x>"
+let g:UltiSnipsJumpBackwardTrigger="<c-q>"
 
 " list all available snip
 nnoremap <Leader><tab> :call UltiSnips#ListSnippets()<CR>
@@ -328,3 +328,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:prettier#config#tab_width = 4
 let g:prettier#config#single_quote = 'false'
 let g:prettier#config#bracket_spacing = 'true'
+
+" source c# related configurations
+source $HOME/.vim/csharp.vim

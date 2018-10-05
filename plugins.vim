@@ -129,4 +129,10 @@ Plugin 'rizzatti/dash.vim'"
 " rdnetto/YCM-Generator
 Plugin 'rdnetto/YCM-Generator'
 
+"gorodinskiy/vim-coloresque
+Plugin 'gorodinskiy/vim-coloresque'
+
+"OmniSharp/omnisharp-vim
+Plugin 'OmniSharp/omnisharp-vim'
+
 call vundle#end()            " required
