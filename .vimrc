@@ -141,16 +141,16 @@ set relativenumber
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 
-if ( !exists("$username") )
+if ( !exists("$vim_username") )
     let g:snips_author = "<username>"
 else
-    let g:snips_author = $username
+    let g:snips_author = $vim_username
 endif
 
-if  ( !exists("$email"))
+if  ( !exists("$vim_email"))
     let g:snips_author_email  = "<email>"
 else
-    let g:snips_author_email  = $email
+    let g:snips_author_email  = $vim_email
 endif
 
 " Add argument (can be negative, default 1) to global variable i.
@@ -332,3 +332,8 @@ source $HOME/.vim/csharp.vim
 " get python document when press K
 " autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
 autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
+
+" use user defined python instead of the default python
+if exists("$vim_ycm_server_python_interpreter")
+    let g:ycm_server_python_interpreter = $vim_ycm_server_python_interpreter
+endif
