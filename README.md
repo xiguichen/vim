@@ -2,9 +2,13 @@
 
 ### Requirements
 Before run install.sh, some preparation need to be done:
+* git is installed
 * cmake is installed
 * nodejs is installed
 * python or python3 is installed
+*NOTE*
+You can install chocolatey for easier install dependencies in windows 10
+https://chocolatey.org/
 
 ### Automatic install in Linux/Mac
 Run command:
@@ -16,9 +20,18 @@ sudo ./install.sh
 ### Manual install in Windows
 * install vim from : https://github.com/vim/vim-win32-installer/releases
 * download and install cmake: https://cmake.org/download/  ( Make sure cmake in PATH environment variable )
+* install nodejs if not already installed
 * installed related python according to vim release page
+* create directory bundle in .vim directory
+* clone repository:
+    * git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim --depth=1
+* copy .vimrc in this repository to your home directory and rename it to \_vimrc
+* start vim and run command: PluginInstall
 * install tern_for_vim with "npm install"
+    * cd ~/.vim/bundle/tern_for_vim/
+    * npm install
 * install youcompleteme
+  * cd ~/.vim/bundle/YouCompleteMe/
   * git submodule update --init --recursive
   * python install.py --clang-completer --tern-completer
   * More info: https://github.com/Valloric/YouCompleteMe#windows
