@@ -134,5 +134,7 @@ Plugin 'gorodinskiy/vim-coloresque'
 
 "OmniSharp/omnisharp-vim
 Plugin 'OmniSharp/omnisharp-vim'
+" Glench/Vim-Jinja2-Syntax
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 call vundle#end()            " required
