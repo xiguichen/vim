@@ -219,7 +219,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-q>"
 nnoremap <Leader><tab> :call UltiSnips#ListSnippets()<CR>
 
 " For ultisnip to create snip in correct directory
-let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips', 'UltiSnips']
 
 " FuzzyFinder exclude node_modules
 let g:fuf_file_exclude = 'node_modules/.*'
@@ -336,4 +336,10 @@ autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
 " use user defined python instead of the default python
 if exists("$vim_ycm_server_python_interpreter")
     let g:ycm_server_python_interpreter = $vim_ycm_server_python_interpreter
+endif
+
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+    tnoremap <M-[> <Esc>
+    tnoremap <C-v><Esc> <Esc>
 endif

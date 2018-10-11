@@ -137,4 +137,7 @@ Plugin 'OmniSharp/omnisharp-vim'
 " Glench/Vim-Jinja2-Syntax
 Plugin 'Glench/Vim-Jinja2-Syntax'
 
+" powershell support
+Plugin 'PProvost/vim-ps1'
+
 call vundle#end()            " required
