@@ -332,6 +332,8 @@ source $HOME/.vim/csharp.vim
 " get python document when press K
 " autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
 autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
+autocmd filetype python nmap <C-]> :YcmCompleter GoTo<CR>
+autocmd filetype python nmap <leader>ref :YcmCompleter GoToReferences<CR>
 
 " use user defined python instead of the default python
 if exists("$vim_ycm_server_python_interpreter")
@@ -343,3 +345,5 @@ if has('nvim')
     tnoremap <M-[> <Esc>
     tnoremap <C-v><Esc> <Esc>
 endif
+
+let g:ale_python_autopep8_options = '--aggressive'

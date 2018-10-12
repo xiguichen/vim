@@ -56,11 +56,13 @@ else
     cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python install.py --tern-completer
 fi
 
-# install autopep8 for python code style fix
+# install autopep8 and flake8 for python code style fix
 if which pip3 >/dev/null; then
     pip3 install --upgrade autopep8
+    pip3 install --upgrade flake8
 else
     pip install --upgrade autopep8
+    pip install --upgrade flake8
 fi
 
 # install meteor tern

@@ -31,10 +31,14 @@ sudo ./install.sh
     * cd ~/.vim/bundle/tern_for_vim/
     * npm install
 * install youcompleteme
-  * cd ~/.vim/bundle/YouCompleteMe/
-  * git submodule update --init --recursive
-  * python install.py --clang-completer --tern-completer
-  * More info: https://github.com/Valloric/YouCompleteMe#windows
+    * cd ~/.vim/bundle/YouCompleteMe/
+    * git submodule update --init --recursive
+    * python install.py --clang-completer --tern-completer
+    * More info: https://github.com/Valloric/YouCompleteMe#windows
+* install flake8 for python lint
+    * pip install flake8
+* install autopep8
+    * pip install autopep8 
 
 ### Configurations
 In order to make this repository common for all people. User specified
