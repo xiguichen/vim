@@ -80,7 +80,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " SirVer/ultisnips
 Plugin 'SirVer/ultisnips'
@@ -139,5 +139,8 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 
 " powershell support
 Plugin 'PProvost/vim-ps1'
+
+" AndrewRadev/splitjoin.vim
+Plugin 'AndrewRadev/splitjoin.vim'
 
 call vundle#end()            " required

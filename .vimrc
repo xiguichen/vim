@@ -340,10 +340,15 @@ if exists("$vim_ycm_server_python_interpreter")
     let g:ycm_server_python_interpreter = $vim_ycm_server_python_interpreter
 endif
 
-if has('nvim')
-    tnoremap <Esc> <C-\><C-n>
-    tnoremap <M-[> <Esc>
-    tnoremap <C-v><Esc> <Esc>
+" use user defined OmniSharp_server_path if defined
+if exists("$vim_OmniSharp_server_path")
+    let g:OmniSharp_server_path = $vim_OmniSharp_server_path
 endif
 
-let g:ale_python_autopep8_options = '--aggressive'
+if has('nvim')
+tnoremap <Esc> <C-\><C-n>
+tnoremap <M-[> <Esc>
+tnoremap <C-v><Esc> <Esc>
+endif
+
+
