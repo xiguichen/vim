@@ -143,4 +143,10 @@ Plugin 'PProvost/vim-ps1'
 " AndrewRadev/splitjoin.vim
 Plugin 'AndrewRadev/splitjoin.vim'
 
+" tpope/vim-abolish
+Plugin 'tpope/vim-abolish'
+
+" roxma/vim-paste-easy
+Plugin 'roxma/vim-paste-easy'
+
 call vundle#end()            " required
