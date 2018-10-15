@@ -140,6 +140,7 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 " powershell support
 Plugin 'PProvost/vim-ps1'
 
+
 " AndrewRadev/splitjoin.vim
 Plugin 'AndrewRadev/splitjoin.vim'
 
@@ -148,5 +149,10 @@ Plugin 'tpope/vim-abolish'
 
 " roxma/vim-paste-easy
 Plugin 'roxma/vim-paste-easy'
+
+
+" tpope/vim-repeat
+Plugin 'tpope/vim-repeat'
+
 
 call vundle#end()            " required
