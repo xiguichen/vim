@@ -29,7 +29,7 @@ Plugin 'easymotion/vim-easymotion'
 " Plugin 'scrooloose/syntastic"
 
 " For automatically quote completion
-Plugin 'Raimondi/delimitMate'
+" Plugin 'Raimondi/delimitMate'
 
 " vim-perl
 Plugin 'vim-perl/vim-perl'
@@ -80,7 +80,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " SirVer/ultisnips
 Plugin 'SirVer/ultisnips'
@@ -154,5 +154,7 @@ Plugin 'roxma/vim-paste-easy'
 " tpope/vim-repeat
 Plugin 'tpope/vim-repeat'
 
+" icymind/NeoSolarized
+Plugin 'icymind/NeoSolarized'
 
 call vundle#end()            " required

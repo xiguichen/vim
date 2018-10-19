@@ -131,9 +131,9 @@ set shiftround                    "Indent/outdent to nearest tabstop
 
 set rtp+=~/.vim/after
 
-if has("win32")
-    set guifont=NSimSun:h11
-endif
+" if has("win32")
+"     set guifont=NSimSun:h11
+" endif
 
 
 " set relativenumber
@@ -346,9 +346,7 @@ if exists("$vim_OmniSharp_server_path")
 endif
 
 if has('nvim')
-tnoremap <Esc> <C-\><C-n>
-tnoremap <M-[> <Esc>
-tnoremap <C-v><Esc> <Esc>
+    tnoremap <Esc> <C-\><C-n>
+    tnoremap <M-[> <Esc>
+    tnoremap <C-v><Esc> <Esc>
 endif
-
-
