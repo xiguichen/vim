@@ -350,3 +350,6 @@ if has('nvim')
     tnoremap <M-[> <Esc>
     tnoremap <C-v><Esc> <Esc>
 endif
+
+" use spell check for python script
+autocmd filetype python :set spell
