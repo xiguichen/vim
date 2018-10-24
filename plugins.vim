@@ -19,6 +19,10 @@ Plugin 'matchit.zip'
 " For Cpp
 Plugin 'OmniCppComplete'
 
+
+" For tpope/vim-dispatch
+Plugin 'tpope/vim-dispatch'
+
 " For git
 Plugin 'tpope/vim-fugitive'
 
@@ -156,5 +160,8 @@ Plugin 'tpope/vim-repeat'
 
 " icymind/NeoSolarized
 Plugin 'icymind/NeoSolarized'
+
+" janko-m/vim-test
+Plugin 'janko-m/vim-test'
 
 call vundle#end()            " required
