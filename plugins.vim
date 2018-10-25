@@ -164,4 +164,7 @@ Plugin 'icymind/NeoSolarized'
 " janko-m/vim-test
 Plugin 'janko-m/vim-test'
 
+" xolox/vim-session
+Plugin 'xolox/vim-session'
+
 call vundle#end()            " required
