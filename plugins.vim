@@ -111,7 +111,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/nerdtree'
 
 " kien/ctrlp.vim
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " triglav/vim-visual-increment
 Plugin 'triglav/vim-visual-increment'
@@ -166,5 +167,8 @@ Plugin 'janko-m/vim-test'
 
 " xolox/vim-session
 Plugin 'xolox/vim-session'
+
+" FelikZ/ctrlp-py-matcher
+Plugin 'FelikZ/ctrlp-py-matcher'
 
 call vundle#end()            " required

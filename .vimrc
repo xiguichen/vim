@@ -332,6 +332,12 @@ source $HOME/.vim/csharp.vim
 " source fugitive related configurations
 source $HOME/.vim/fugitive.vim
 
+" source ctrlp related configurations
+source $HOME/.vim/ctrlp.vim
+
+" source ack related configurations
+source $HOME/.vim/ack.vim
+
 " get python document when press K
 " autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
 autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
@@ -357,5 +363,3 @@ endif
 " use spell check for python script
 autocmd filetype python :set spell
 
-"  don't automatically save session
-let g:session_autosave = 'no'
