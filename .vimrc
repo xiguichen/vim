@@ -212,14 +212,17 @@ let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 
 " For the shotkey conflict with ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-q>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
 " list all available snip
 nnoremap <Leader><tab> :call UltiSnips#ListSnippets()<CR>
 
 " For ultisnip to create snip in correct directory
 let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips', 'UltiSnips']
+
+" g:ultisnips_python_style
+let g:ultisnips_python_style="sphinx"
 
 " FuzzyFinder exclude node_modules
 let g:fuf_file_exclude = 'node_modules/.*'
@@ -341,7 +344,7 @@ source $HOME/.vim/ack.vim
 " get python document when press K
 " autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
 autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
-autocmd filetype python nmap <C-]> :YcmCompleter GoTo<CR>
+autocmd filetype python nmap <C-k> :YcmCompleter GoTo<CR>
 autocmd filetype python nmap <leader>ref :YcmCompleter GoToReferences<CR>
 
 " use user defined python instead of the default python
@@ -362,4 +365,8 @@ endif
 
 " use spell check for python script
 autocmd filetype python :set spell
+
+" don't automatically save the session
+let g:session_autoload = false
+
 
