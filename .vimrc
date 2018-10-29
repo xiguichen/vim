@@ -367,4 +367,4 @@ endif
 autocmd filetype python :set spell
 
 " don't automatically save the session
-let g:session_autoload = "false"
+let g:session_autoload = 'no'
