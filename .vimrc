@@ -52,7 +52,7 @@ set shiftround
 
 " This file contains the dictionary so that vim can automatically pop up for
 " you
-set thesaurus+=$HOME/mthes/mthesaur.txt
+set thesaurus+=$HOME/.vim/mthes/words.txt
 autocmd FileType html set dictionary+=$HOME/.vim/bundle/bootstrap-snippets/dictionary
 set complete+=k
 
