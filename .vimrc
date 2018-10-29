@@ -281,22 +281,6 @@ nnoremap <C-W>O :call MaximizeToggle()<CR>
 nnoremap <C-W>o :call MaximizeToggle()<CR>
 nnoremap <C-W><C-O> :call MaximizeToggle()<CR>
 
-function! MaximizeToggle()
-  if exists("s:maximize_session")
-    exec "source " . s:maximize_session
-    call delete(s:maximize_session)
-    unlet s:maximize_session
-    let &hidden=s:maximize_hidden_save
-    unlet s:maximize_hidden_save
-  else
-    let s:maximize_hidden_save = &hidden
-    let s:maximize_session = tempname()
-    set hidden
-    exec "mksession! " . s:maximize_session
-    only
-  endif
-endfunction
-
 command! -nargs=1 Ss let @/ = <q-args>
 
 
@@ -344,6 +328,9 @@ source $HOME/.vim/ack.vim
 " source vim test related configurations
 source $HOME/.vim/test.vim
 
+" source helper functions
+source $HOME/.vim/helpers.vim
+
 " get python document when press K
 " autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
 autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
@@ -371,3 +358,5 @@ autocmd filetype python :set spell
 
 " don't automatically save the session
 let g:session_autoload = 'no'
+let g:session_autosave = 'no'
+
