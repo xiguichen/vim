@@ -341,6 +341,9 @@ source $HOME/.vim/ctrlp.vim
 " source ack related configurations
 source $HOME/.vim/ack.vim
 
+" source vim test related configurations
+source $HOME/.vim/test.vim
+
 " get python document when press K
 " autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
 autocmd filetype python nmap K :YcmCompleter GetDoc<CR>

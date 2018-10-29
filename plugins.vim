@@ -171,4 +171,7 @@ Plugin 'xolox/vim-session'
 " FelikZ/ctrlp-py-matcher
 Plugin 'FelikZ/ctrlp-py-matcher'
 
+" ron89/thesaurus_query.vim
+Plugin 'ron89/thesaurus_query.vim'
+
 call vundle#end()            " required
