@@ -25,6 +25,7 @@ sudo ./install.sh
 * create directory bundle in .vim directory
 * clone repository:
     * git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim --depth=1
+* create a _vimrc in your home directory with "source $HOME/.vim/.vimrc"
 * copy .vimrc in this repository to your home directory and rename it to \_vimrc
 * start vim and run command: PluginInstall
 * install tern_for_vim with "npm install"
