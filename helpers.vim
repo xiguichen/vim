@@ -14,3 +14,10 @@ function! MaximizeToggle()
   endif
 endfunction
 
+command! Fanyi call Fanyi()
+
+function! Fanyi()
+    let s:current_word = expand("<cword>")
+    let s:command = "Dispatch fanyi " . s:current_word
+    execute s:command
+endfunction
