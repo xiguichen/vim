@@ -30,6 +30,7 @@ let mapleader=" "
 
 " For NERD Tree
 nnoremap <silent> <F4> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Set so that vim can enable the syntax automatically
 syntax on
@@ -338,8 +339,8 @@ source $HOME/.vim/helpers.vim
 " get python document when press K
 " autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
 autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
-autocmd filetype python nmap <C-k> :YcmCompleter GoTo<CR>
 autocmd filetype python nmap <leader>ref :YcmCompleter GoToReferences<CR>
+autocmd filetype python nnoremap <buffer> <leader><leader>g :YcmCompleter GoTo<CR>
 
 " use user defined python instead of the default python
 if exists("$vim_ycm_server_python_interpreter")
@@ -363,4 +364,6 @@ autocmd filetype python :set spell
 " don't automatically save the session
 let g:session_autoload = 'no'
 let g:session_autosave = 'no'
+
+set t_Co=256
 
