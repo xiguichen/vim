@@ -156,6 +156,10 @@ Plug 'ron89/thesaurus_query.vim'
 " leafgarland/typescript-vim
 Plug 'leafgarland/typescript-vim'
 
+" jeetsukumaran/vim-pythonsense
+Plug 'jeetsukumaran/vim-pythonsense'
+
 " call vundle#end()            " required
 call plug#end()
+
 
