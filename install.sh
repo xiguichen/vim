@@ -16,16 +16,20 @@ if ! which git >/dev/null; then
 fi
 
 # make sure that python3 or python is installed
-which python3 >/dev/null || which python >/dev/null || echo "python and python3 is not installed yet!" && exit 1
+which python3 >/dev/null \
+    || which python >/dev/null || ( echo "python and python3 is not installed yet!" && exit 1 )
 
 # make sure that we have installed cmake
-which cmake >/dev/null || echo "cmake is not installed yet, please install cmake first" && exit 1
+which cmake >/dev/null \
+    || ( echo "cmake is not installed yet, please install cmake first" && exit 1 )
 
 # make sure that we have installed node
-which node >/dev/null || echo "node is not installed yet, please install nodejs first" && exit 1
+which node >/dev/null \
+    || (echo "node is not installed yet, please install nodejs first" && exit 1)
 
 # make sure that npm have been installed
-which npm >/dev/null || echo "npm is not installed yet, please install npm first" && exit 1
+which npm >/dev/null \
+    || (echo "npm is not installed yet, please install npm first" && exit 1)
 
 if [[ ! (-d ~/.vim/bundle) ]]; then
     mkdir -p ~/.vim/bundle
