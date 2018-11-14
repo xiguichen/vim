@@ -290,7 +290,11 @@ command! -nargs=1 Ss let @/ = <q-args>
 " colorscheme
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+try
+    colorscheme solarized
+catch /^Vim\%((\a\+)\)\=:E185/
+    " deal with it
+endtry
 
 autocmd FileType js UltiSnipsAddFiletypes javascript-jsdoc
 
