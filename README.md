@@ -7,7 +7,7 @@ Before run install.sh, some preparation need to be done:
 * nodejs is installed
 * python or python3 is installed
 
-*NOTE*
+*NOTE:*
 You can install chocolatey for easier install dependencies in windows 10
 https://chocolatey.org/
 
