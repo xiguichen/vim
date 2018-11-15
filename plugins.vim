@@ -173,6 +173,7 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 
 " ron89/thesaurus_query.vim
 Plugin 'ron89/thesaurus_query.vim'
+
 " leafgarland/typescript-vim
 Plugin 'leafgarland/typescript-vim'
 
