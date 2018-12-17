@@ -40,24 +40,22 @@ if [[ -d ~/.vim/bundle/Vundle.vim/.git ]]; then
     echo "Vundle plugin have already been installed, no need to install"
 else
     echo "Vundle plugin does not exists, try to download ..."
-    if [[ -d ~/.vim/bundle/Vundle.vim ]]; then
-        rm -rf ~/.vim/bundle/Vundle.vim
-    fi
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim --depth=1
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     echo "Vundle plugin download finished"
 
 fi
 
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 
 # install jsbeautify
 cd ~/.vim/bundle/vim-jsbeautify && git submodule update --init --recursive
 
 # install youcompleteme, we prefer python3 if installed
 if which python3 > /dev/null; then
-    cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python3 install.py --tern-completer
+    cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python3 install.py
 else
-    cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python install.py --tern-completer
+    cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python install.py
 fi
 
 # install autopep8 and flake8 for python code style fix

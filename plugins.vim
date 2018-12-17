@@ -2,179 +2,160 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+set rtp+=~/.vim/autoload/plug.vim
+call plug#begin('~/.vim/plugged')
 
-" Plugin 'pydoc.vim'
 
-Plugin 'tabular'
+" Plug 'pydoc.vim'
+
+Plug 'godlygeek/tabular'
 
 " For comment
-"Plugin 'tComment'
-Plugin 'tomtom/tcomment_vim'
+"Plug 'tComment'
+Plug 'tomtom/tcomment_vim'
 
 " For html match
-Plugin 'matchit.zip'
+Plug 'andymass/vim-matchup'
 
 " For Cpp
-Plugin 'OmniCppComplete'
+Plug 'vim-scripts/OmniCppComplete'
 
 
 " For tpope/vim-dispatch
-Plugin 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch'
 
 " For git
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " For easy motion
-Plugin 'easymotion/vim-easymotion'
-
-" For syntax check
-" Plugin 'scrooloose/syntastic"
-
-" For automatically quote completion
-" Plugin 'Raimondi/delimitMate'
+Plug 'easymotion/vim-easymotion'
 
 " vim-perl
-Plugin 'vim-perl/vim-perl'
-
-" Tag list
-" Plugin 'taglist.vim'
+Plug 'vim-perl/vim-perl'
 
 " surround
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+Plug 'majutsushi/tagbar'
 
-Plugin 'AutoComplPop'
-Plugin 'c9s/perlomni.vim'
-
-Plugin 'L9'
-Plugin 'vimwiki/vimwiki'
-
-Plugin 'javacomplete'
-
-Plugin 'Tagbar'
-Plugin 'perl-support.vim'
-
-
-
-
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 
 " jsbeautify
-Plugin 'maksimr/vim-jsbeautify'
+Plug 'maksimr/vim-jsbeautify'
 
 
-Plugin 'vim-misc'
-" Plugin 'xolox/vim-easytags'
+" Plug 'xolox/vim-easytags'
 
 " better white space
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 
 " bootstrap snippets
-Plugin 'bonsaiben/bootstrap-snippets'
+Plug 'bonsaiben/bootstrap-snippets'
 
 " Lint
-Plugin 'Shutnik/jshint2.vim'
+Plug 'Shutnik/jshint2.vim'
 
 " tern_for_vim
-Plugin 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " SirVer/ultisnips
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 " Optional:
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " Shougo/vimshell.vim
-Plugin 'Shougo/vimshell.vim'
+Plug 'Shougo/vimshell.vim'
 
 " Shougo/vimproc.vim
-Plugin 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim'
 
 " mattn/emmet-vim
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 
 " handlebar
-Plugin 'mustache/vim-mustache-handlebars'
+Plug 'mustache/vim-mustache-handlebars'
 
 " coffee script
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 
 " scrooloose/nerdtree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " kien/ctrlp.vim
-" Plugin 'kien/ctrlp.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " triglav/vim-visual-increment
-Plugin 'triglav/vim-visual-increment'
+Plug 'triglav/vim-visual-increment'
 
 " w0rp/ale
 if v:version >= 800
-  Plugin 'w0rp/ale'
+  Plug 'w0rp/ale'
 endif
 
 " colorscheme
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " prettier/vim-prettier
-Plugin 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier'
 
 " rizzatti/dash.vim
-Plugin 'rizzatti/dash.vim'"
+Plug 'rizzatti/dash.vim'"
 
 " rdnetto/YCM-Generator
-Plugin 'rdnetto/YCM-Generator'
+Plug 'rdnetto/YCM-Generator'
 
 "gorodinskiy/vim-coloresque
-Plugin 'gorodinskiy/vim-coloresque'
+Plug 'gorodinskiy/vim-coloresque'
 
 "OmniSharp/omnisharp-vim
-Plugin 'OmniSharp/omnisharp-vim'
+Plug 'OmniSharp/omnisharp-vim'
 " Glench/Vim-Jinja2-Syntax
-Plugin 'Glench/Vim-Jinja2-Syntax'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 " powershell support
-Plugin 'PProvost/vim-ps1'
+Plug 'PProvost/vim-ps1'
 
 
 " AndrewRadev/splitjoin.vim
-Plugin 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " tpope/vim-abolish
-Plugin 'tpope/vim-abolish'
+Plug 'tpope/vim-abolish'
 
 " roxma/vim-paste-easy
-Plugin 'roxma/vim-paste-easy'
+Plug 'roxma/vim-paste-easy'
 
 
 " tpope/vim-repeat
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 
 " icymind/NeoSolarized
-Plugin 'icymind/NeoSolarized'
+Plug 'icymind/NeoSolarized'
 
 " janko-m/vim-test
-Plugin 'janko-m/vim-test'
+Plug 'janko-m/vim-test'
 
 " xolox/vim-session
-Plugin 'xolox/vim-session'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
 
 " FelikZ/ctrlp-py-matcher
-Plugin 'FelikZ/ctrlp-py-matcher'
+Plug 'FelikZ/ctrlp-py-matcher'
 
 " ron89/thesaurus_query.vim
-Plugin 'ron89/thesaurus_query.vim'
+Plug 'ron89/thesaurus_query.vim'
 
 " leafgarland/typescript-vim
-Plugin 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 
-call vundle#end()            " required
+" call vundle#end()            " required
+call plug#end()
+
