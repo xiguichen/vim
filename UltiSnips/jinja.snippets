@@ -1,0 +1,13 @@
+
+snippet column "highchart column" b
+// container-monthly-on-board-trend
+{% set trend=report['${0}'] %}
+{% set series=trend['series'] %}
+{% set xAxis=trend['xAxis'] %}
+{{ highcharts.column(container="${1}",
+    text="Monthly Customer On Board Trend",
+    series=series,
+    xAxis=xAxis
+) }}
+
+endsnippet

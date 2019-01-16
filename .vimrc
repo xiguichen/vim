@@ -306,6 +306,7 @@ let g:prettier#config#trailing_comma = 'none'
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'python': ['autopep8'],
+\   'typescript': ['tslint'],
 \}
 
 " Set this setting in vimrc if you want to fix files automatically on save.
@@ -342,6 +343,9 @@ autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
 autocmd filetype python nmap <leader>ref :YcmCompleter GoToReferences<CR>
 autocmd filetype python nnoremap <buffer> <leader><leader>g :YcmCompleter GoTo<CR>
 
+" rename for javascript and typescript
+autocmd filetype ts nmap <F2> :YcmCompleter Rename<F12>
+
 " use user defined python instead of the default python
 if exists("$vim_ycm_server_python_interpreter")
     let g:ycm_server_python_interpreter = $vim_ycm_server_python_interpreter
@@ -366,4 +370,4 @@ let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 
 set t_Co=256
-
+set iskeyword-=.

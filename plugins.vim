@@ -118,7 +118,7 @@ Plug 'gorodinskiy/vim-coloresque'
 "OmniSharp/omnisharp-vim
 Plug 'OmniSharp/omnisharp-vim'
 " Glench/Vim-Jinja2-Syntax
-Plug 'Glench/Vim-Jinja2-Syntax'
+" Plug 'Glench/Vim-Jinja2-Syntax'
 
 " powershell support
 Plug 'PProvost/vim-ps1'
@@ -158,6 +158,12 @@ Plug 'leafgarland/typescript-vim'
 
 " jeetsukumaran/vim-pythonsense
 Plug 'jeetsukumaran/vim-pythonsense'
+
+" lepture/vim-jinja
+Plug 'lepture/vim-jinja'
+
+" terryma/vim-multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
 
 " call vundle#end()            " required
 call plug#end()
