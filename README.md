@@ -20,14 +20,19 @@ sudo ./install.sh
 
 ### Manual install in Windows
 * install vim from : https://github.com/vim/vim-win32-installer/releases
-* download and install cmake: https://cmake.org/download/  ( Make sure cmake in PATH environment variable )
-* install nodejs if not already installed
-* installed related python according to vim release page
-* create directory bundle in .vim directory
-* clone repository:
-    * git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim --depth=1
+* install dependency (manual download)
+   * download and install cmake: https://cmake.org/download/  ( Make sure cmake in PATH environment variable )
+   * install nodejs if not already installed
+   * installed related python according to vim release page
+* install dependency (automatically)
+   ```
+   @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+   choco install cmake -y
+   choco install python3 --version=3.6.7 -y
+   choco install nodejs -y
+   ```
+
 * create a _vimrc in your home directory with "source $HOME/.vim/.vimrc"
-* copy .vimrc in this repository to your home directory and rename it to \_vimrc
 * start vim and run command: PluginInstall
 * install tern_for_vim with "npm install"
     * cd ~/.vim/bundle/tern_for_vim/
