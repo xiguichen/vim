@@ -54,6 +54,7 @@ set shiftround
 " This file contains the dictionary so that vim can automatically pop up for
 " you
 set thesaurus+=$HOME/.vim/mthes/words.txt
+set dictionary+=$HOME/.vim/mthes/words.txt
 autocmd FileType html set dictionary+=$HOME/.vim/bundle/bootstrap-snippets/dictionary
 set complete+=k
 
@@ -138,7 +139,7 @@ set rtp+=~/.vim/after
 
 
 " set relativenumber
-set relativenumber 
+set nu
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 

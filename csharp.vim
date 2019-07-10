@@ -151,3 +151,4 @@ function!  s:RelativePath(currentFile, currentProjectFile)
     endif
 
 endfunction
+
