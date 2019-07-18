@@ -192,39 +192,6 @@ nmap <silent> <F6> :set invnumber<CR>
 autocmd QuickFixCmdPost *grep* cwindow
 
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-" YouCompleteMe black list
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'text' : 1,
-      \ 'vimwiki' : 1,
-      \ 'gitcommit' : 1,
-      \}
-
-" YouCompleteMe conflict with ultisnips 'tab'
-let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
-
-" For the shotkey conflict with ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-j>"
-
-" list all available snip
-nnoremap <Leader><tab> :call UltiSnips#ListSnippets()<CR>
-
-" For ultisnip to create snip in correct directory
-let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips', 'UltiSnips']
-
-" g:ultisnips_python_style
-let g:ultisnips_python_style="sphinx"
-
 " FuzzyFinder exclude node_modules
 let g:fuf_file_exclude = 'node_modules/.*'
 
@@ -334,27 +301,18 @@ source $HOME/.vim/ack.vim
 " source vim test related configurations
 source $HOME/.vim/test.vim
 
+" source YouCompleteMe related configurations
+source $HOME/.vim/youcompleteme.vim
+
 " source helper functions
 source $HOME/.vim/helpers.vim
 
-" get python document when press K
-" autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
-autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
-autocmd filetype python nmap <leader>ref :YcmCompleter GoToReferences<CR>
-autocmd filetype python nnoremap <buffer> <leader><leader>g :YcmCompleter GoTo<CR>
-
-" rename for javascript and typescript
-autocmd filetype ts nmap <F2> :YcmCompleter Rename<F12>
-
-" use user defined python instead of the default python
-if exists("$vim_ycm_server_python_interpreter")
-    let g:ycm_server_python_interpreter = $vim_ycm_server_python_interpreter
-endif
 
 " use user defined OmniSharp_server_path if defined
 if exists("$vim_OmniSharp_server_path")
     let g:OmniSharp_server_path = $vim_OmniSharp_server_path
 endif
+let g:OmniSharp_server_stdio = 1
 
 if has('nvim')
     tnoremap <Esc> <C-\><C-n>

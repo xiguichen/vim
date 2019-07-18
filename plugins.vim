@@ -4,7 +4,8 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 " set rtp+=~/.vim/bundle/Vundle.vim
 " call vundle#begin()
-set rtp+=~/.vim/autoload/plug.vim
+" source ~/.vim/autoload/plug.vim
+set rtp+=~/.vim/
 call plug#begin('~/.vim/plugged')
 
 
@@ -62,7 +63,7 @@ Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb'] }
 
 " SirVer/ultisnips
 Plug 'SirVer/ultisnips'

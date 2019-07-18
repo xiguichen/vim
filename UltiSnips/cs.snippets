@@ -1,16 +1,58 @@
-snippet tmth "Test Method"
-[TestMethod]
+snippet tm "Test Method"
+[Test]
 ${0:public} ${1:void} Test${2:SomeMethod}($3)
 {
 	$4
 }
 endsnippet
 
-
-snippet tc "Test class"
-[TestClass]
-${0:public} class UnitTest${1:ClassName}
+snippet tma "Test async Method"
+[Test]
+public async Task Test${1:SomeMethod}()
 {
 	$2
 }
+endsnippet
+
+
+snippet tc "Test class"
+[TestFixture]
+${0:public} class ${1:ClassName}
+{
+	$2
+}
+endsnippet
+
+snippet setup "Test setup" b
+[SetUp]
+public void SetUp()
+{
+
+}
+endsnippet
+
+snippet #region "region" b
+#region ${1}
+
+#endregion
+endsnippet
+
+snippet para "/// param"
+<param name="${1}">${2}</param>
+endsnippet
+
+snippet example "/// example"
+<example>
+/// <code>
+/// ${1}
+/// </code>
+/// </example>
+endsnippet
+
+snippet exception "/// exception"
+<exception cref="${1}">Throw when ${2}</exception>
+endsnippet
+
+snippet returns "/// returns"
+<returns>${1}</returns>
 endsnippet
