@@ -166,6 +166,9 @@ Plug 'lepture/vim-jinja'
 " terryma/vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
 
+" python refactoring
+Plug 'python-rope/ropevim'
+
 " call vundle#end()            " required
 call plug#end()
 

@@ -308,6 +308,32 @@ source $HOME/.vim/youcompleteme.vim
 " source helper functions
 source $HOME/.vim/helpers.vim
 
+" get python document when press K
+" autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
+autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
+autocmd filetype python nmap <leader>ref :YcmCompleter GoToReferences<CR>
+autocmd filetype python nnoremap <buffer> <leader><leader>g :YcmCompleter GoTo<CR>
+
+" rename for javascript and typescript
+autocmd filetype ts nmap <F2> :YcmCompleter Rename<F12>
+
+" use user defined python instead of the default python
+if exists("$vim_ycm_server_python_interpreter")
+    let g:ycm_server_python_interpreter = $vim_ycm_server_python_interpreter
+endif
+let g:ycm_semantic_triggers = {
+\   'c': ['->', '.'],
+\   'objc': ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+\            're!\[.*\]\s'],
+\   'ocaml': ['.', '#'],
+\   'cpp,cuda,objcpp': ['->', '.', '::'],
+\   'perl': ['->'],
+\   'php': ['->', '::'],
+\   'cs,d,elixir,go,groovy,java,javascript,julia,perl6,python,scala,typescript,vb': ['.'],
+\   'ruby,rust': ['.', '::'],
+\   'lua': ['.', ':'],
+\   'erlang': [':'],
+\ }
 
 " use user defined OmniSharp_server_path if defined
 if exists("$vim_OmniSharp_server_path")
@@ -330,3 +356,6 @@ let g:session_autosave = 'no'
 
 set t_Co=256
 set iskeyword-=.
+
+let g:ycm_server_python_interpreter = "/usr/local/bin/python3"
+let g:ropevim_prefer_py3 = 1
