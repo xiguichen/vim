@@ -308,6 +308,9 @@ source $HOME/.vim/youcompleteme.vim
 " source helper functions
 source $HOME/.vim/helpers.vim
 
+" source refactor
+source $HOME/.vim/refactor.vim
+
 " get python document when press K
 " autocmd FileType python nnoremap K  :YcmCompleter GetDoc<cr>
 autocmd filetype python nmap K :YcmCompleter GetDoc<CR>
