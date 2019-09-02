@@ -372,5 +372,4 @@ let g:session_autosave = 'no'
 set t_Co=256
 set iskeyword-=.
 
-let g:ycm_server_python_interpreter = "/usr/local/bin/python3"
 let g:ropevim_prefer_py3 = 1
