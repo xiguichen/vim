@@ -31,31 +31,16 @@ which node >/dev/null \
 which npm >/dev/null \
     || (echo "npm is not installed yet, please install npm first" && exit 1)
 
-if [[ ! (-d ~/.vim/bundle) ]]; then
-    mkdir -p ~/.vim/bundle
-fi
-
-# check if we already installed Vundle
-if [[ -d ~/.vim/bundle/Vundle.vim/.git ]]; then
-    echo "Vundle plugin have already been installed, no need to install"
-else
-    echo "Vundle plugin does not exists, try to download ..."
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    echo "Vundle plugin download finished"
-
-fi
-
 vim +PlugInstall +qall
 
 # install jsbeautify
-cd ~/.vim/bundle/vim-jsbeautify && git submodule update --init --recursive
+cd ~/.vim/plugged/vim-jsbeautify && git submodule update --init --recursive
 
 # install youcompleteme, we prefer python3 if installed
 if which python3 > /dev/null; then
-    cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python3 install.py
+    cd ~/.vim/plugged/YouCompleteMe/ && git submodule update --init --recursive && python3 install.py
 else
-    cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python install.py
+    cd ~/.vim/plugged/YouCompleteMe/ && git submodule update --init --recursive && python install.py
 fi
 
 # install autopep8 and flake8 for python code style fix
@@ -67,7 +52,14 @@ else
     pip install --upgrade flake8
 fi
 
+# install ropevim
+if which python3; then
+    cd ~/.vim/plugged/ropevim && python setup.py install
+else
+    cd ~/.vim/plugged/ropevim && python3 setup.py install
+fi
+
 # install meteor tern
-cd ~/.vim/bundle/tern_for_vim/ && npm install
-cd ~/.vim && cp -f post_fix/meteor.json bundle/tern_for_vim/node_modules/tern/defs/meteor.json
+cd ~/.vim/plugged/tern_for_vim/ && npm install
+cd ~/.vim && cp -f post_fix/meteor.json plugged/tern_for_vim/node_modules/tern/defs/meteor.json
 echo "Please set your environment variable 'TERM' to 'screen-256color' in order to make the color scheme work"
