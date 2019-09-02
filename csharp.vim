@@ -56,20 +56,41 @@ augroup omnisharp_commands
     " Compile the project
     autocmd FileType cs nnoremap <Leader>c :CompileCSharpProject<CR>
 
+    " Run the project
+    autocmd FileType cs nnoremap <Leader>r :RunCSharpProject<CR>
+
 augroup END
 
 command! CompileCSharpProject call s:CompileCSharpProject()
+command! RunCSharpProject call s:RunCSharpProject()
 
 
 let g:OmniSharp_server_path = $HOME . "/.omnisharp/omnisharp-roslyn/OmniSharp.exe"
+
 
 " use the system installed mono instead
 let g:OmniSharp_server_use_mono = 1
 
 function! s:CompileCSharpProject ()
-    let currentProjectFile = s:GetCurrentProjectFilePath()
-    call system("dotnet build " . currentProjectFile)
+    let l:currentProjectFile = s:GetCurrentProjectFilePath()
+    if l:currentProjectFile == ""
+        let l:sln_or_dir = OmniSharp#FindSolutionOrDir()
+        echo system("dotnet build " . l:sln_or_dir)
+    else
+        echo system("dotnet build " . l:currentProjectFile)
+    endif
 endfunction
+
+function! s:RunCSharpProject ()
+    let l:currentProjectFile = s:GetCurrentProjectFilePath()
+    if l:currentProjectFile == ""
+        let l:sln_or_dir = OmniSharp#FindSolutionOrDir()
+        echo system("dotnet run " . l:sln_or_dir)
+    else
+        echo system("dotnet run " . l:currentProjectFile)
+    endif
+endfunction
+
 
 function! csharp#AddCurrentFileToProject()
 

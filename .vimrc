@@ -19,7 +19,7 @@ endif
 
 
 " Don't have a windows style key map
-let g:skip_loading_mswin = 1
+" let g:skip_loading_mswin = 1
 
 " For the function list
 nnoremap <silent> <F3> :TagbarToggle<CR>
@@ -337,6 +337,18 @@ let g:ycm_semantic_triggers = {
 \   'lua': ['.', ':'],
 \   'erlang': [':'],
 \ }
+" different behavior for windows
+if has('win32')
+    " CTRL-C and CTRL-Insert are Copy
+    vnoremap <C-C> "+y
+    vnoremap <C-Insert> "+y
+
+    " CTRL-V and SHIFT-Insert are Paste
+    map <C-V>		"+gP
+    map <S-Insert>		"+g
+
+    noremap <C-Q>		<C-V>
+endif
 
 " use user defined OmniSharp_server_path if defined
 if exists("$vim_OmniSharp_server_path")

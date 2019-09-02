@@ -1,4 +1,4 @@
-nnoremap <c-.> :CtrlP .<CR>
+nnoremap <a-p> :CtrlP .<CR>
 
 " Set delay to prevent extra search
 let g:ctrlp_lazy_update = 350
