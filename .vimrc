@@ -371,6 +371,7 @@ let g:session_autosave = 'no'
 
 set t_Co=256
 set iskeyword-=.
+set iskeyword-=#
 
 let g:ropevim_prefer_py3 = 1
 autocmd FileType html set completeopt=menuone,noinsert,noselect,longest
