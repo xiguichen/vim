@@ -114,7 +114,7 @@ Plug 'rizzatti/dash.vim'"
 Plug 'rdnetto/YCM-Generator'
 
 "gorodinskiy/vim-coloresque
-Plug 'xiguichen/vim-coloresque'
+Plug 'gko/vim-coloresque'
 
 "OmniSharp/omnisharp-vim
 Plug 'OmniSharp/omnisharp-vim'
