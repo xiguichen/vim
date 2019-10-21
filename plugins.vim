@@ -63,7 +63,7 @@ Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim'] }
+Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js'] }
 
 " SirVer/ultisnips
 Plug 'SirVer/ultisnips'
@@ -98,7 +98,7 @@ Plug 'triglav/vim-visual-increment'
 
 " w0rp/ale
 if v:version >= 800
-  Plug 'w0rp/ale'
+  Plug 'dense-analysis/ale'
 endif
 
 " colorscheme
