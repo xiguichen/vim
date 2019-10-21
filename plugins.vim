@@ -114,7 +114,7 @@ Plug 'rizzatti/dash.vim'"
 Plug 'rdnetto/YCM-Generator'
 
 "gorodinskiy/vim-coloresque
-Plug 'gorodinskiy/vim-coloresque'
+Plug 'xiguichen/vim-coloresque'
 
 "OmniSharp/omnisharp-vim
 Plug 'OmniSharp/omnisharp-vim'
@@ -166,8 +166,17 @@ Plug 'lepture/vim-jinja'
 " terryma/vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
 
-" python refactoring
-Plug 'python-rope/ropevim'
+" jmcantrell/vim-virtualenv
+Plug 'jmcantrell/vim-virtualenv'
+
+" vim-airline/vim-airline
+Plug 'vim-airline/vim-airline'
+
+" tpope/vim-unimpaired
+Plug 'tpope/vim-unimpaired'
+
+" python-mode/python-mode
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " call vundle#end()            " required
 call plug#end()

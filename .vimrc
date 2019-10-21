@@ -22,14 +22,14 @@ endif
 " let g:skip_loading_mswin = 1
 
 " For the function list
-nnoremap <silent> <F3> :TagbarToggle<CR>
+nnoremap <silent> TT :TagbarToggle<CR>
 
 
 " change leader key to space
 let mapleader=" "
 
 " For NERD Tree
-nnoremap <silent> <F4> :NERDTreeToggle<CR>
+nnoremap <silent> NN :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Set so that vim can enable the syntax automatically
@@ -373,3 +373,12 @@ set t_Co=256
 set iskeyword-=.
 
 let g:ropevim_prefer_py3 = 1
+autocmd FileType html set completeopt=menuone,noinsert,noselect,longest
+set iskeyword-=.
+set formatoptions-=tc
+
+autocmd FileType python nnoremap <buffer> gd :YcmCompleter GoToDefinition<CR>
+
+
+" enable pymode ropevim
+let g:pymode_rope = 1
