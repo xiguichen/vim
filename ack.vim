@@ -1,5 +1,5 @@
 let g:ackprg = 'ag --nogroup --nocolor --column'
-map <leader>/ :Ack
+map <leader>/ :Ack 
 map <leader>#  :SearchCurrent<CR>
 
 command! SearchCurrent call SearchCurrent()
