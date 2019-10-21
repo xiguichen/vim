@@ -21,3 +21,7 @@ function! Fanyi()
     let s:command = "Dispatch fanyi " . s:current_word
     execute s:command
 endfunction
+
+command! Css :set omnifunc=csscomplete#CompleteCSS
+command! Html :set omnifunc=htmlcomplete#CompleteTags
+
