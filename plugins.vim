@@ -63,7 +63,7 @@ Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js'] }
+Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js', 'c'] }
 
 " SirVer/ultisnips
 Plug 'SirVer/ultisnips'
@@ -175,8 +175,11 @@ Plug 'vim-airline/vim-airline'
 " tpope/vim-unimpaired
 Plug 'tpope/vim-unimpaired'
 
+" tpope/vim-speeddating
+Plug 'tpope/vim-speeddating'
+
 " python-mode/python-mode
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " call vundle#end()            " required
 call plug#end()
