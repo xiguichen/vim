@@ -63,7 +63,7 @@ Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js', 'c'] }
+" Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js', 'c', 'markdown' ]}
 
 " SirVer/ultisnips
 Plug 'SirVer/ultisnips'
@@ -177,6 +177,15 @@ Plug 'tpope/vim-unimpaired'
 
 " tpope/vim-speeddating
 Plug 'tpope/vim-speeddating'
+
+"  plasticboy/vim-markdown
+Plug 'plasticboy/vim-markdown'
+
+" iamcco/markdown-preview.nvim
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" ferrine/md-img-paste.vim
+ Plug 'ferrine/md-img-paste.vim'
 
 " python-mode/python-mode
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }

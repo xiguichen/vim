@@ -382,6 +382,6 @@ set formatoptions-=tc
 
 autocmd FileType python nnoremap <buffer> gd :YcmCompleter GoToDefinition<CR>
 
+" markdown image paste handle
+autocmd FileType markdown nmap <buffer><silent> leader>i :call mdip#MarkdownClipboardImage()<CR>
 
-" enable pymode ropevim
-let g:pymode_rope = 1
