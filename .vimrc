@@ -383,5 +383,5 @@ set formatoptions-=tc
 autocmd FileType python nnoremap <buffer> gd :YcmCompleter GoToDefinition<CR>
 
 " markdown image paste handle
-autocmd FileType markdown nmap <buffer><silent> leader>i :call mdip#MarkdownClipboardImage()<CR>
+autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
 
