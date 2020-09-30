@@ -63,7 +63,7 @@ Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-" Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js', 'c', 'markdown' ]}
+Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js', 'c', 'markdown' ]}
 
 " SirVer/ultisnips
 Plug 'SirVer/ultisnips'
