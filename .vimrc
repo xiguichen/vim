@@ -385,3 +385,7 @@ autocmd FileType python nnoremap <buffer> gd :YcmCompleter GoToDefinition<CR>
 " markdown image paste handle
 autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
 
+" short key for change to the current directory of the file use lcd
+nnoremap <leader>cd :lcd %:h<CR>
+" short key for edit files near the current file
+nnoremap <leader>ew :e <C-R>=expand("%:.:h") . "/"<CR>
