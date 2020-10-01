@@ -288,7 +288,7 @@ let g:prettier#config#single_quote = 'false'
 let g:prettier#config#bracket_spacing = 'true'
 
 " source c# related configurations
-source $HOME/.vim/csharp.vim
+" source $HOME/.vim/csharp.vim
 
 " source fugitive related configurations
 source $HOME/.vim/fugitive.vim
@@ -349,12 +349,6 @@ let g:ycm_semantic_triggers = {
     "
     " noremap <C-Q>		<C-V>
 " endif
-
-" use user defined OmniSharp_server_path if defined
-if exists("$vim_OmniSharp_server_path")
-    let g:OmniSharp_server_path = $vim_OmniSharp_server_path
-endif
-let g:OmniSharp_server_stdio = 1
 
 if has('nvim')
     tnoremap <Esc> <C-\><C-n>

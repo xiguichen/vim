@@ -1,3 +1,9 @@
+" use user defined OmniSharp_server_path if defined
+if exists("$vim_OmniSharp_server_path")
+    let g:OmniSharp_server_path = $vim_OmniSharp_server_path
+endif
+let g:OmniSharp_server_stdio = 1
+
 " settings for c#
 augroup omnisharp_commands
     autocmd!
