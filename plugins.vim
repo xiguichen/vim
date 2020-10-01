@@ -117,7 +117,8 @@ Plug 'rdnetto/YCM-Generator'
 Plug 'gko/vim-coloresque'
 
 "OmniSharp/omnisharp-vim
-Plug 'OmniSharp/omnisharp-vim'
+" Plug 'OmniSharp/omnisharp-vim'
+
 " Glench/Vim-Jinja2-Syntax
 " Plug 'Glench/Vim-Jinja2-Syntax'
 
