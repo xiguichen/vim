@@ -186,7 +186,10 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " ferrine/md-img-paste.vim
- Plug 'ferrine/md-img-paste.vim'
+Plug 'ferrine/md-img-paste.vim'
+
+" fidian/hexmode
+Plug 'fidian/hexmode'
 
 " python-mode/python-mode
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
