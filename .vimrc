@@ -383,3 +383,8 @@ autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownCli
 nnoremap <leader>cd :lcd %:h<CR>
 " short key for edit files near the current file
 nnoremap <leader>ew :e <C-R>=expand("%:.:h") . "/"<CR>
+
+" disable bell
+set noerrorbells
+set novisualbell
+set t_vb=
