@@ -388,3 +388,11 @@ nnoremap <leader>ew :e <C-R>=expand("%:.:h") . "/"<CR>
 set noerrorbells
 set novisualbell
 set t_vb=
+" fix shortkey conflict of ultisnip and vim-markdown2
+exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=UltiSnips#ExpandSnippet()<cr>"
+
+" fix shortkey conflict of beautify and md-img-paste
+autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
+
+" ale error shortcut
+nmap <silent> <C-e> <Plug>(ale_next_wrap)

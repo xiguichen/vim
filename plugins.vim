@@ -182,6 +182,9 @@ Plug 'tpope/vim-speeddating'
 "  plasticboy/vim-markdown
 Plug 'plasticboy/vim-markdown'
 
+" xiguichen/vim-markdown2
+" Plug 'xiguichen/vim-markdown2'
+
 " iamcco/markdown-preview.nvim
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
