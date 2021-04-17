@@ -396,3 +396,7 @@ autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownCli
 
 " ale error shortcut
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
+
+" fix nerdtree window moves when toggle problem
+set guioptions-=L
+
