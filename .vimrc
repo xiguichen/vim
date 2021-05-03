@@ -211,12 +211,7 @@ set incsearch
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
 set tm=500
-
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -280,6 +275,9 @@ let g:ale_fixers = {
 " Set this setting in vimrc if you want to fix files automatically on save.
 " This is off by default.
 let g:ale_fix_on_save = 1
+
+let g:ale_python_flake8_args = '--ignore=E501'
+let g:ale_python_flake8_options = '--ignore=E501'
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -385,9 +383,7 @@ nnoremap <leader>cd :lcd %:h<CR>
 nnoremap <leader>ew :e <C-R>=expand("%:.:h") . "/"<CR>
 
 " disable bell
-set noerrorbells
-set novisualbell
-set t_vb=
+set noerrorbells visualbell t_vb=
 " fix shortkey conflict of ultisnip and vim-markdown2
 exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=UltiSnips#ExpandSnippet()<cr>"
 
