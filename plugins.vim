@@ -186,7 +186,7 @@ Plug 'plasticboy/vim-markdown'
 " Plug 'xiguichen/vim-markdown2'
 
 " iamcco/markdown-preview.nvim
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'xiguichen/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " ferrine/md-img-paste.vim
 Plug 'ferrine/md-img-paste.vim'
