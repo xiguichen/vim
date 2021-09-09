@@ -395,3 +395,7 @@ nmap <silent> <C-e> <Plug>(ale_next_wrap)
 
 " fix nerdtree window moves when toggle problem
 set guioptions-=L
+
+" for terraform
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1

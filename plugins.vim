@@ -63,7 +63,7 @@ Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim'
 
 " Valloric/YouCompleteMe
-Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js', 'c', 'markdown', 'go' ]}
+Plug 'Valloric/YouCompleteMe' , { 'for': ['python', 'ipynb', 'cs', 'vim', 'ts', 'js', 'c', 'go' ]}
 
 " SirVer/ultisnips
 Plug 'SirVer/ultisnips'
@@ -193,6 +193,9 @@ Plug 'ferrine/md-img-paste.vim'
 
 " fidian/hexmode
 Plug 'fidian/hexmode'
+
+" hashivim/vim-terraform
+Plug 'hashivim/vim-terraform'
 
 " python-mode/python-mode
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
