@@ -48,4 +48,4 @@ let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips', 'UltiSnips']
 " g:ultisnips_python_style
 let g:ultisnips_python_style="sphinx"
 
-
+let g:ycm_always_populate_location_list = 1

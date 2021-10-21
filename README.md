@@ -71,3 +71,7 @@ configurations should be put into the environment variable instead of put into
     * make a link of the original vim configuration file
         * mkdir -p ~/.config/nvim/
         * ln -s ~/.vimrc ~/.config/nvim/init.vim
+
+## Tips:
+### Open error list produced by youcompleteme
+lopen
