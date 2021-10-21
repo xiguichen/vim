@@ -399,3 +399,7 @@ set guioptions-=L
 " for terraform
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+let g:winManagerWindowLayout = "BufExplorer|FileExplorer|TagList"
+let g:winManagerWindowLayout='FileExplorer|TagList'
+

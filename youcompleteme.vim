@@ -49,3 +49,7 @@ let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips', 'UltiSnips']
 let g:ultisnips_python_style="sphinx"
 
 let g:ycm_always_populate_location_list = 1
+
+nnoremap <silent> gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <F12> :YcmCompleter GoToImplementation<CR>
+nnoremap <silent> gr :YcmCompleter GoToReferences<CR>

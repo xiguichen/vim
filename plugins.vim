@@ -197,6 +197,10 @@ Plug 'fidian/hexmode'
 " hashivim/vim-terraform
 Plug 'hashivim/vim-terraform'
 
+Plug 'vim-scripts/winmanager'
+
+Plug 'vim-scripts/taglist.vim'
+
 " python-mode/python-mode
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
